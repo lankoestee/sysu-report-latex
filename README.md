@@ -1,10 +1,10 @@
-# SYSU-Report-$\LaTeX$
+# SYSU-Report-LaTeX
 
 ![](https://img.shields.io/badge/Sun%20Yat--sen%20University-005826) ![](https://img.shields.io/badge/LaTeX-008080)
 
-适用于中山大学的一个简单的，自己正在使用的$\LaTeX$报告模板。当然这**不能**适用于学位论文等正式论文的编写，但是对于小型的报告还是非常适用的。配合[md2tex](https://github.com/lankoestee/md2tex)适用以获得舒适的排版体验。
+适用于中山大学的一个简单的，自己正在使用的**LaTeX**报告模板。当然这**不能**适用于学位论文等正式论文的编写，但是对于小型的报告还是非常适用的。配合[md2tex](https://github.com/lankoestee/md2tex)适用以获得舒适的排版体验。
 
-本文相同的模板还有几乎一模一样的<font color=#239DAD>Typst</font>的版本！详见[SYSU-Report-Typst](https://github.com/lankoestee/sysu-report-typst)。
+本文相同的模板还有几乎一模一样的**Typst**的版本！详见[SYSU-Report-Typst](https://github.com/lankoestee/sysu-report-typst)。
 
 ## 快速使用
 
