@@ -1,0 +1,117 @@
+\documentclass[12pt]{ctexart}
+\usepackage{geometry,tikz,graphicx,tabularx,float,xcolor,color,colortbl,cite,booktabs,colortbl}
+\usepackage{subcaption,multirow,fancyhdr,gensymb,amsmath,pythonhighlight,multicol,makecell}
+\usepackage[colorlinks,bookmarksopen,bookmarksnumbered]{hyperref}
+% minted包用于展示代码，需要安装python和pygments
+\usepackage[cache=false]{minted}
+\usepackage[T1]{fontenc}
+
+% ---------- 个人信息改这里 ----------
+\newcommand{\school}{一个学院}
+\newcommand{\major}{一个年级专业}
+\newcommand{\righthead}{一个页眉标题}
+\newcommand{\maintitle}{一个大标题}
+\newcommand{\course}{一个课程}
+\newcommand{\teacher}{一个老师}
+\newcommand{\expnumber}{一个报告类型}
+\newcommand{\name}{一个名字}
+\newcommand{\id}{一个学号}
+% ---------- 个人信息改这里 ----------
+
+% \usemintedstyle{paraiso}
+\setlength{\parindent}{2em}
+% 这里的页边距是word文档的默认页边距
+\geometry{left=2.54cm,right=2.54cm,top=2.54cm,bottom=2.54cm}
+\geometry{headsep=1.2cm}
+% \graphicspath{ {./figure/} }
+\pagestyle{fancy}
+\lhead{\includegraphics[width=34.7mm]{figure/badge-horizonal.pdf}}
+\rhead{\righthead}
+\makeatletter
+\newcommand\dlmu[2][4cm]{\hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt}
+\makeatother
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=green}
+% 这里设置了一个浅浅的灰色作为代码背景色
+\definecolor{codebg}{rgb}{0.95,0.95,0.95}
+\setminted{
+    bgcolor=codebg,
+    linenos,
+    breaklines,
+    breakanywhere,
+}
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    % \quad\\[0.2cm]
+    \includegraphics[width=9cm]{figure/badge.pdf}
+    \\[1cm]\textbf{\huge{\maintitle}}\\[1cm]
+    \begin{minipage}{11.1cm}
+        \centering
+        \begin{flushleft} \Large
+            \makebox[3cm][s]{\textbf{\fangsong{学院：}}}\dlmu[8cm]{\school}\\[0.3cm]
+            \makebox[3cm][s]{\textbf{\fangsong{年级专业：}}}\dlmu[8cm]{\major}\\[0.3cm]
+            \makebox[3cm][s]{\textbf{\fangsong{课程：}}}\dlmu[8cm]{\course}\\[0.3cm]
+            \makebox[3cm][s]{\textbf{\fangsong{指导老师：}}}\dlmu[8cm]{\teacher}\\[0.3cm]
+            \makebox[3cm][s]{\textbf{\fangsong{报告编号：}}}\dlmu[8cm]{\expnumber}\\[0.3cm]
+            \makebox[3cm][s]{\textbf{\fangsong{小组成员：}}}\dlmu[8cm]{\name}\\[0.3cm]
+            \makebox[3cm][s]{\textbf{\fangsong{学号：}}}\dlmu[8cm]{\id}\\[0.3cm]
+            \makebox[3cm][s]{\textbf{\fangsong{日期：}}}\dlmu[8cm]{\today}\\[0.3cm]
+        \end{flushleft}
+    \end{minipage}
+    \newpage
+    \tableofcontents
+    \newpage
+\end{titlepage}
+\hypersetup{linkcolor=red}
+
+% ---------- 正文开始 ----------
+
+% 可以直接在这里写，也可以在其他tex文件中写然后使用\include或者\input命令进行引入
+
+% 下面是一些用作展示的代码，用的时候删掉就好了
+\section{一级标题}
+\subsection{二级标题}
+\subsubsection{三级标题}
+\begin{minted}{python}
+def func():
+    print("Hello, world!")
+\end{minted}
+下面展示了一个图片还有一个表格，如图\ref{fig:badge}所示，表\ref{tab:table1}是一个简单的三线表。
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figure/badge-horizonal.pdf}
+    \caption{这是一个图片}
+    \label{fig:badge}
+\end{figure}
+\begin{table}[ht]
+    \centering
+    \caption{这是简单的三线表}
+    \label{tab:table1}
+    \begin{tabular}{ccc}
+        \toprule
+        \textbf{A} & \textbf{B} & \textbf{C} \\
+        \midrule
+        1 & 2 & 3 \\
+        4 & 5 & 6 \\
+        7 & 8 & 9 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+这是一个简单的行内公式$E=mc^2$，这是一个简单的行间公式：
+\begin{equation}
+    E=mc^2
+\end{equation}
+行内的代码可以这样写\mintinline{python}|print('Hello World')|
+\section{再一个一级标题}
+\subsection{再一个二级标题}
+
+% ---------- 正文结束 ----------
+
+% 如果有参考文献的话，可以取消下面几行的注释
+% \newpage
+% \addcontentsline{toc}{section}{参考文献}
+% \bibliographystyle{plain}
+% % 这里的reference就是你的bib文件的名字
+% \bibliography{reference}
+\end{document}
