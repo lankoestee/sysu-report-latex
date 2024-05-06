@@ -17,7 +17,7 @@ git clone https://github.com/lankoestee/sysu-report-latex
 当然对于不是中山大学的使用者而言，你可以修改`figure/badge.pdf`为自己学校或单位的正方形图标，修改`figure/badge-horizonal.pdf`为自己学校或单位的长方形图标。
 
 > [!IMPORTANT]  
-> 本模板的使用需要`minted`扩展包，这需要安装Python以及`pygments`
+> 本模板的使用需要`minted`扩展包，这需要安装Python以及`pygments`。
 
 > [!TIP]
 > 本仓库中的`image`文件夹**不是**必要的，仅为了展示README中的图片，克隆后推荐删除。
