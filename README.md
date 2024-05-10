@@ -6,6 +6,8 @@
 
 本文相同的模板还有几乎一模一样的**Typst**的版本！详见[SYSU-Report-Typst](https://github.com/lankoestee/sysu-report-typst)。
 
+本文也是本人舒适写作大法的一部分，详见[舒适写作大法 | 大聪明de小妙招 (cleversmall.com)](https://cleversmall.com/posts/e06f63c1/)。
+
 ## 快速使用
 
 ```bash
